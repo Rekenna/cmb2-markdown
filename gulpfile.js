@@ -40,8 +40,11 @@ gulp.task('build', ['js', 'sass'], function (){
   gulp.src('assets/**/*')
     .pipe(gulp.dest('./build/assets'));
 
-  gulp.src('**/*.php')
-    .pipe(gulp.dest('./build'));
+  gulp.src('./cmb2-markdown.php').pipe(gulp.dest('./build'));
+  gulp.src('./index.php').pipe(gulp.dest('./build'));
+
+  gulp.src('README.txt').pipe(gulp.dest('./build'));
+  gulp.src('LICENSE.txt').pipe(gulp.dest('./build'));
 });
 
 gulp.task('default', ['watch']);
