@@ -1,0 +1,56 @@
+.cmb2-postbox .cmb-type-text-markdown .cmb-th, .cmb2-postbox .cmb-type-text-markdown .cmb-th + .cmb-td {
+  float: none;
+  display: block;
+  width: 100%; }
+
+.cmb2-postbox .cmb-type-text-markdown textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 222px;
+  padding: 5px;
+  line-height: 1.5; }
+
+.cmb2-postbox .cmb-type-text-markdown article {
+  box-sizing: border-box;
+  min-height: 222px;
+  padding: 5px 15px;
+  line-height: 1.5;
+  background-color: #efefef;
+  width: 100%;
+  height: auto;
+  display: none;
+  position: relative; }
+  .cmb2-postbox .cmb-type-text-markdown article:after {
+    content: "Live Preview";
+    font-size: 12px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px; }
+  .cmb2-postbox .cmb-type-text-markdown article:first-child {
+    margin-top: 0; }
+  .cmb2-postbox .cmb-type-text-markdown article.visible {
+    display: block; }
+
+.cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 30px; }
+  .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    margin: 0; }
+    .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li.toggle-preview {
+      padding: 0 12px;
+      background-color: #dedede;
+      color: #333; }
+      .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li.toggle-preview.visible {
+        color: #fff;
+        background-color: #3AB795; }
+    .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li.cheatsheet a {
+      font-size: 12px;
+      margin-right: 15px; }
+    .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li:hover {
+      cursor: pointer; }

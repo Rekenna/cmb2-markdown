@@ -10,7 +10,7 @@ var buildBranch = require('gulp-build-branch');
 gulp.task('sass', function () {
   return gulp.src('./src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./assets'));
 });
 
 gulp.task('sass:watch', function () {
@@ -22,9 +22,9 @@ gulp.task('js', function () {
     .pipe(babel({
         presets: ['env']
     }))
-    .pipe(concat('app.js'))
+    .pipe(concat('cmb2-markdown.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('./assets'));
 });
 
 gulp.task('js:watch', function () {
@@ -36,16 +36,6 @@ gulp.task('watch', ['js', 'sass'],function () {
   gulp.watch('./src/**/*.scss', ['sass']);
 });
 
-gulp.task('build', ['js', 'sass'],function () {
-  gulp.src('*.php')
-    .pipe(gulp.dest('build'));
-
-  gulp.src('dist/**/*')
-    .pipe(gulp.dest('build/dist'));
-});
-
-gulp.task('deploy', ['build'], function() {
-  return buildBranch({ folder: 'build', branch: 'build' });
-});
+gulp.task('build', ['js', 'sass']);
 
 gulp.task('default', ['watch']);
