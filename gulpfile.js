@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var buildBranch = require('gulp-build-branch');
 
 gulp.task('sass', function () {
   return gulp.src('./src/**/*.scss')
@@ -41,6 +42,10 @@ gulp.task('build', ['js', 'sass'],function () {
 
   gulp.src('dist/**/*')
     .pipe(gulp.dest('build/dist'));
+});
+
+gulp.task('deploy', ['build'], function() {
+  return buildBranch({ folder: 'build', branch: 'build' });
 });
 
 gulp.task('default', ['watch']);
