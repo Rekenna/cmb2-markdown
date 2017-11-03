@@ -36,6 +36,12 @@ gulp.task('watch', ['js', 'sass'],function () {
   gulp.watch('./src/**/*.scss', ['sass']);
 });
 
-gulp.task('build', ['js', 'sass']);
+gulp.task('build', ['js', 'sass'], function (){
+  gulp.src('assets/**/*')
+    .pipe(gulp.dest('./build/assets'));
+
+  gulp.src('**/*.php')
+    .pipe(gulp.dest('./build'));
+});
 
 gulp.task('default', ['watch']);
