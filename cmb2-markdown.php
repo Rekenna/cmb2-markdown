@@ -7,17 +7,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://rekenna.github.io
- * @since             1.0.0
+ * @link              http://ryanmckenna.io/
+ * @since             1.0.1
  * @package           CMB2_Markdown
  *
  * @wordpress-plugin
  * Plugin Name:       CMB2 Markdown
  * Plugin URI:        https://github.com/Rekenna/cmb2-markdown
  * Description:       Adds a Markdown enabled textarea with a live preview to the available CMB2 fields.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Ryan McKenna
- * Author URI:        http://rekenna.github.io/
+ * Author URI:        http://ryanmckenna.io/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       cmb2-markdown
@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'CMB2_MARKDOWN', '1.0.0' );
+define( 'CMB2_MARKDOWN', '1.0.1' );
 
 /**
  * Begins execution of the plugin.
@@ -38,7 +38,7 @@ define( 'CMB2_MARKDOWN', '1.0.0' );
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    1.0.1
  */
 
  function cmb2_render_callback_for_text_markdown( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {

@@ -7,6 +7,7 @@ Example Usage
 $cmb->add_field( array(
     'name' => 'Markdown Enabled Field',
     'type' => 'text_markdown',
-    'id'   => 'test_markdown'
+    'id'   => 'test_markdown',
+    'sanitization_cb' => 'markdown_sanitize'
 ) );
 `

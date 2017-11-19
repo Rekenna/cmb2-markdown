@@ -1,6 +1,6 @@
 {
   "name": "cmb2-markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds a GitHub flavored Markdown field to CMB2",
   "main": "index.js",
   "scripts": {
