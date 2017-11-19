@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .cmb2-postbox .cmb-type-text-markdown .cmb-th, .cmb2-postbox .cmb-type-text-markdown .cmb-th + .cmb-td {
   float: none;
   display: block;
@@ -49,8 +50,275 @@
       .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li.toggle-preview.visible {
         color: #fff;
         background-color: #3AB795; }
+    .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li.convert-html {
+      padding: 0 12px;
+      background-color: #dedede;
+      color: #333; }
+      .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li.convert-html.edited {
+        color: #fff;
+        background-color: green; }
     .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li.cheatsheet a {
       font-size: 12px;
       margin-right: 15px; }
     .cmb2-postbox .cmb-type-text-markdown .cmb2-markdown-actions li:hover {
       cursor: pointer; }
+
+article#markdown-result {
+  font-size: 16px;
+  /*!
+Typeplate : Starter Kit
+URL ........... http://typeplate.com
+Version ....... 3.0.2
+Github ........ https://github.com/typeplate/starter-kit
+Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+License ....... Creative Commmons Attribution 3.0
+License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+*/
+  /**
+ * Lining Definition Style Markup
+ *
+  <dl class="typl8-lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+  /**
+ * Dictionary Definition Style Markup
+ *
+  <dl class="typl8-dictionary-style">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+  /**
+ * Blockquote Markup
+ *
+    <figure>
+      <blockquote cite="">
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <cite>
+          <small><a href=""></a></small>
+        </cite>
+      </figcaption>
+    </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+  /**
+ * Pull Quotes Markup
+ *
+  <aside class="typl8-pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+  /**
+ * Figures Markup
+ *
+  <figure>
+    <figcaption>
+      <strong>Fig. X.X | </strong><cite title=""></cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+  /**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
+ *
+ * Extend this object into your markup.
+ *
+ */ }
+
+@font-face {
+  article#markdown-result {
+    font-family: "Ampersand";
+    src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+    unicode-range: U+0026; } }
+
+@font-face {
+  article#markdown-result {
+    font-family: "Ampersand";
+    src: local("Georgia");
+    unicode-range: U+270C; } }
+  article#markdown-result .typl8-tera, article#markdown-result .typl8-giga, article#markdown-result .typl8-mega, article#markdown-result h1, article#markdown-result .typl8-alpha, article#markdown-result h2, article#markdown-result .typl8-beta, article#markdown-result h3, article#markdown-result .typl8-gamma, article#markdown-result h4, article#markdown-result .typl8-delta, article#markdown-result h5, article#markdown-result .typl8-epsilon, article#markdown-result .typl8-zeta, article#markdown-result h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+    color: #222; }
+  article#markdown-result blockquote + figcaption cite {
+    display: block;
+    font-size: inherit;
+    text-align: right; }
+  article#markdown-result body {
+    word-wrap: break-word; }
+  article#markdown-result pre code {
+    word-wrap: normal; }
+  article#markdown-result html {
+    font: normal 112.5% / 1.65 serif; }
+  article#markdown-result body {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    color: #444; }
+  article#markdown-result .typl8-tera {
+    font-size: 6.5em;
+    margin-bottom: 3.93939rem; }
+  article#markdown-result .typl8-giga {
+    font-size: 5em;
+    margin-bottom: 3.0303rem; }
+  article#markdown-result .typl8-mega, article#markdown-result h1 {
+    font-size: 4em;
+    margin-bottom: 2.42424rem; }
+  article#markdown-result .typl8-alpha, article#markdown-result h2 {
+    font-size: 3.33333em;
+    margin-bottom: 2.0202rem; }
+  article#markdown-result .typl8-beta, article#markdown-result h3 {
+    font-size: 2.66667em;
+    margin-bottom: 1.61616rem; }
+  article#markdown-result .typl8-gamma, article#markdown-result h4 {
+    font-size: 2em;
+    margin-bottom: 1.21212rem; }
+  article#markdown-result .typl8-delta, article#markdown-result h5 {
+    font-size: 1.33333em;
+    margin-bottom: 0.80808rem; }
+  article#markdown-result .typl8-epsilon {
+    font-size: 1.16667em;
+    margin-bottom: 0.70707rem; }
+  article#markdown-result .typl8-zeta, article#markdown-result h6 {
+    font-size: 1em;
+    margin-bottom: 0.60606rem; }
+  article#markdown-result p {
+    margin: auto auto 1.5rem; }
+  article#markdown-result p + p {
+    text-indent: 1.5rem;
+    margin-top: -1.5rem; }
+  article#markdown-result small {
+    font-size: 65%; }
+  article#markdown-result input,
+  article#markdown-result abbr,
+  article#markdown-result acronym,
+  article#markdown-result blockquote,
+  article#markdown-result code,
+  article#markdown-result kbd,
+  article#markdown-result q,
+  article#markdown-result samp,
+  article#markdown-result var {
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none; }
+  article#markdown-result pre {
+    white-space: pre; }
+  article#markdown-result pre code {
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap; }
+  article#markdown-result code {
+    white-space: pre;
+    font-family: monospace; }
+  article#markdown-result abbr {
+    -webkit-font-variant: small-caps;
+    -moz-font-variant: small-caps;
+    -ms-font-variant: small-caps;
+    font-variant: small-caps;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: gray; }
+  article#markdown-result abbr[title]:hover {
+    cursor: help; }
+  article#markdown-result .typl8-drop-cap:first-letter {
+    float: left;
+    margin: 10px 10px 0 0;
+    padding: 0 20px;
+    font-size: 4em;
+    font-family: inherit;
+    line-height: 1;
+    text-indent: 0;
+    background: transparent;
+    color: inherit; }
+  article#markdown-result p + .typl8-drop-cap {
+    text-indent: 0;
+    margin-top: 0; }
+  article#markdown-result .typl8-lining dt,
+  article#markdown-result .typl8-lining dd {
+    display: inline;
+    margin: 0; }
+  article#markdown-result .typl8-lining dt + dt:before,
+  article#markdown-result .typl8-lining dd + dt:before {
+    content: "\A";
+    white-space: pre; }
+  article#markdown-result .typl8-lining dd + dd:before {
+    content: ", "; }
+  article#markdown-result .typl8-lining dd:before {
+    content: ": ";
+    margin-left: -0.2rem; }
+  article#markdown-result .typl8-dictionary-style dt {
+    display: inline;
+    counter-reset: definitions; }
+  article#markdown-result .typl8-dictionary-style dt + dt:before {
+    content: ", ";
+    margin-left: -0.2rem; }
+  article#markdown-result .typl8-dictionary-style dd {
+    display: block;
+    counter-increment: definitions; }
+  article#markdown-result .typl8-dictionary-style dd:before {
+    content: counter(definitions, decimal) ". "; }
+  article#markdown-result .typl8-pull-quote {
+    position: relative;
+    padding: 1em; }
+  article#markdown-result .typl8-pull-quote:before, article#markdown-result .typl8-pull-quote:after {
+    height: 1em;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #dc976e; }
+  article#markdown-result .typl8-pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  article#markdown-result .typl8-pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+  article#markdown-result h2 {
+    padding: 0; }
+  article#markdown-result p {
+    font-size: 16px; }
+  article#markdown-result ul {
+    list-style-type: disc;
+    list-style-position: inside; }
+  article#markdown-result ol {
+    list-style-type: decimal;
+    list-style-position: inside; }
+  article#markdown-result ul ul, article#markdown-result ol ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 15px; }
+  article#markdown-result ol ol, article#markdown-result ul ol {
+    list-style-type: lower-latin;
+    list-style-position: inside;
+    margin-left: 15px; }
+  article#markdown-result p + p {
+    text-indent: 0; }

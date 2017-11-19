@@ -47,18 +47,31 @@ define( 'CMB2_MARKDOWN', '1.0.0' );
      <ul class="cmb2-markdown-actions">
        <li class="cheatsheet"><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet" target="_blank">Markdown Cheatsheet</a></li>
        <li class="toggle-preview">Toggle Preview</li>
+			 <li class="convert-html">Convert to HTML</li>
      </ul>
      <div class="markdown-textarea">
-       <textarea name="cmb2_markdown" class="markdown-content" rows="10" cols="60"></textarea>
+			 <?php echo $field_type_object->textarea( array() ); ?>
      </div>
-     <div class="hidden-field">
-       <?php echo $field_type_object->textarea( array() ); ?>
-     </div>
-     <article class="markdown-result"></article>
+     <article id="markdown-result" class="markdown-result"></article>
  	</div>
    <?php
  }
  add_action( 'cmb2_render_text_markdown', 'cmb2_render_callback_for_text_markdown', 10, 5 );
+
+function markdown_sanitize( $value, $field_args, $field ) {
+  return $value;
+}
+
+//
+// Example
+//
+
+// $cmb2->add_field( array(
+//  	'name' => 'CMB2 Markdown',
+//  	'id'      => 'cmb2_markdown',
+//  	'type'       => 'text_markdown',
+//		'sanitization_cb' => 'markdown_sanitize'
+//  ));
 
  //
 // Scripts
