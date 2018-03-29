@@ -42,6 +42,9 @@ define( 'CMB2_MARKDOWN', '1.0.1' );
  */
 
 function cmb2_render_callback_for_text_markdown( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+	if ( ! is_admin() ) {
+		cmb2_markdown_enqueue_script();
+	}
 	?>
 	<div class="cmb2-markdown">
 		<ul class="cmb2-markdown-actions">
@@ -77,8 +80,8 @@ function markdown_sanitize( $value, $field_args, $field ) {
 //
 // Scripts
 //
-function CMB2_Markdown_enqueue_script() {
+function cmb2_markdown_enqueue_script() {
 	wp_enqueue_style( 'cmb2_markdown_css',  plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.css', false, '1.0.0' );
 	wp_register_script( 'cmb2_markdown_script', plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.js' );
 }
-add_action( 'admin_enqueue_scripts', 'CMB2_Markdown_enqueue_script' );
+add_action( 'admin_enqueue_scripts', 'cmb2_markdown_enqueue_script' );
