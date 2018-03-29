@@ -55,6 +55,7 @@ define( 'CMB2_MARKDOWN', '1.0.1' );
      <article id="markdown-result" class="markdown-result"></article>
  	</div>
    <?php
+   wp_enqueue_script( 'cmb2_markdown_script' );
  }
  add_action( 'cmb2_render_text_markdown', 'cmb2_render_callback_for_text_markdown', 10, 5 );
 
@@ -80,6 +81,6 @@ function CMB2_Markdown_enqueue_script()
 {
   wp_register_style( 'cmb2_markdown_css',  plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.css', false, '1.0.0' );
   wp_enqueue_style( 'cmb2_markdown_css' );
-  wp_enqueue_script( 'cmb2_markdown_script', plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.js' );
+  wp_register_script( 'cmb2_markdown_script', plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.js' );
 }
 add_action('admin_enqueue_scripts', 'CMB2_Markdown_enqueue_script');
