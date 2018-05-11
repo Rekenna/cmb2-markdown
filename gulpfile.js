@@ -5,7 +5,6 @@ var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var buildBranch = require('gulp-build-branch');
 
 gulp.task('sass', function () {
   return gulp.src('./src/**/*.scss')

@@ -41,25 +41,29 @@ define( 'CMB2_MARKDOWN', '1.0.1' );
  * @since    1.0.1
  */
 
- function cmb2_render_callback_for_text_markdown( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
-   ?>
- 	<div class="cmb2-markdown">
-     <ul class="cmb2-markdown-actions">
-       <li class="cheatsheet"><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet" target="_blank">Markdown Cheatsheet</a></li>
-       <li class="toggle-preview">Toggle Preview</li>
-			 <li class="convert-html">Convert to HTML</li>
-     </ul>
-     <div class="markdown-textarea">
-			 <?php echo $field_type_object->textarea( array() ); ?>
-     </div>
-     <article id="markdown-result" class="markdown-result"></article>
- 	</div>
-   <?php
- }
- add_action( 'cmb2_render_text_markdown', 'cmb2_render_callback_for_text_markdown', 10, 5 );
+function cmb2_render_callback_for_text_markdown( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+	if ( ! is_admin() ) {
+		cmb2_markdown_enqueue_script();
+	}
+	?>
+	<div class="cmb2-markdown">
+		<ul class="cmb2-markdown-actions">
+			<li class="cheatsheet"><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet" target="_blank">Markdown Cheatsheet</a></li>
+			<li class="toggle-preview">Toggle Preview</li>
+			<li class="convert-html">Convert to HTML</li>
+		</ul>
+		<div class="markdown-textarea">
+			<?php echo $field_type_object->textarea( array() ); ?>
+		</div>
+		<article id="markdown-result" class="markdown-result"></article>
+	</div>
+	<?php
+	wp_enqueue_script( 'cmb2_markdown_script' );
+}
+add_action( 'cmb2_render_text_markdown', 'cmb2_render_callback_for_text_markdown', 10, 5 );
 
 function markdown_sanitize( $value, $field_args, $field ) {
-  return $value;
+	return $value;
 }
 
 //
@@ -73,13 +77,11 @@ function markdown_sanitize( $value, $field_args, $field ) {
 //		'sanitization_cb' => 'markdown_sanitize'
 //  ));
 
- //
+//
 // Scripts
 //
-function CMB2_Markdown_enqueue_script()
-{
-  wp_register_style( 'cmb2_markdown_css',  plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.css', false, '1.0.0' );
-  wp_enqueue_style( 'cmb2_markdown_css' );
-  wp_enqueue_script( 'cmb2_markdown_script', plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.js' );
+function cmb2_markdown_enqueue_script() {
+	wp_enqueue_style( 'cmb2_markdown_css',  plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.css', false, '1.0.0' );
+	wp_register_script( 'cmb2_markdown_script', plugin_dir_url( __FILE__ ) . 'assets/cmb2-markdown.js' );
 }
-add_action('admin_enqueue_scripts', 'CMB2_Markdown_enqueue_script');
+add_action( 'admin_enqueue_scripts', 'cmb2_markdown_enqueue_script' );
